@@ -8,4 +8,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::apiResource('quizzes', \App\Http\Controllers\Api\QuizController::class);
+Route::apiResource('quizzes.questions', \App\Http\Controllers\Api\QuestionController::class)->shallow();
 
